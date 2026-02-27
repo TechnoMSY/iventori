@@ -1,5 +1,5 @@
 <div class="w-100">
-    <h2 class="mb-2 text-gray-800">Kategori Buku</h2>
+    <h2 class="mb-2 text-gray-800">Kategori Komputer</h2>
            
     <?php  if($_SESSION['user']['level'] !='peminjam') : ?>
         <div class="mb-3">
@@ -13,7 +13,7 @@
         <table class="table table-bordered" id="datatable" width = "100%" cellspasing>
             <thead>
                 <th>NO</th>
-                <th>Nama Kategori</th>
+                <th>Nama Komputer</th>
             <?php  if($_SESSION['user']['level'] !='peminjam') : ?>
                 <th>Aksi</th>
             <?php endif;?>
@@ -26,12 +26,14 @@
                  ?>
                 <tr>
                     <td><?php echo $no++; ?></td>
-                    <td><?php echo $data['kategori']; ?></td>
+                    <td><?php echo $data['merk']; ?></td>
+                    
 
                     <!-- Hanya bisa di buka oleh admin -->
                     <?php  if($_SESSION['user']['level'] !='peminjam') : ?>
                     <td>
                         <a href="?page=kategori_ubah&&id=<?= $data['id_kategori'];?>" class="btn btn-sm btn-info">Ubah</a>
+                        <a href="?page=kategori_detail&&id=<?= $data['id_kategori'];?>" class="btn btn-sm btn-success">Detail</a>
                         <a href="?page=kategori_hapus&&id=<?php echo $data['id_kategori']; ?>" 
                             class="btn btn-danger"
                             onclick="return confirm('Yakin ingin menghapus data ini?')">

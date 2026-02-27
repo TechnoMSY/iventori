@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h2 class="mb-4 text-gray-800">Ubah Kategori Buku</h2>
+    <h2 class="mb-4 text-gray-800">Ubah Kategori Komputer</h2>
 
     <div class="card shadow mb-4">
         <div class="card-body">
